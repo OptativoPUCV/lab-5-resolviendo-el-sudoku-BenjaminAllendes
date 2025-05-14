@@ -86,3 +86,9 @@ sudoku.c:90:15: error: expected expression before '{' token
      arreglo = {0} ;
                ^
 ebe9a51
+Wed, May 14, 2025 11:01:13 AM: 
+ sudoku.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+ tests:  2|4
+total_score: 15/70
+3e80c3c
