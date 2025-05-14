@@ -49,7 +49,7 @@ int is_valid(Node* n){
     for(int k = 9 ; k< 9 ; k++){
       if (arreglo[n->sudo[i][k]] == 0){
         arreglo[n->sudo[i][k]] = 1 ;
-        printf("numero = %d, ", arreglo[n->sudo[i][k]]) ;
+        printf(" 3 numero = %d, ", arreglo[n->sudo[i][k]]) ;
       }
       else {
         return 0 ;
