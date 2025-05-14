@@ -47,6 +47,7 @@ int is_valid(Node* n){
   int arreglo[10] = {0} ;
   for(int i = 0 ; i < 9 ; i++){
     for(int k = 0 ; k< 9 ; k++){
+      if (n->sudo [i][k] == 0) continue ;
       if (arreglo[n->sudo[i][k]] == 0){
         arreglo[n->sudo[i][k]] = 1 ;
         printf(" 3 numero = %d, ", arreglo[n->sudo[i][k]]) ;
@@ -59,6 +60,7 @@ int is_valid(Node* n){
   int arreglo_dos[10] = {0} ;
   for(int i = 0 ; i < 9 ; i++){
     for(int k = 0 ; k < 9 ; k++){
+      if (n->sudo [k][i] == 0) continue ;
       if (arreglo_dos[n->sudo[k][i]] == 0){
         printf("numero = %d, ", arreglo_dos[n->sudo[k][i]]) ;
         arreglo_dos[n->sudo[k][i]] = 1 ;
