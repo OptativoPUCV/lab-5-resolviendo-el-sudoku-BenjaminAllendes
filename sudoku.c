@@ -95,6 +95,7 @@ List* get_adj_nodes(Node* n){
       Node * sudo_adj ;
       sudo_adj = copy(n) ; 
       sudo_adj->sudo[pos_vacia_i][pos_vacia_k] = i ;
+      if (!is_valid(sudo_adj)) continue ;
       pushBack(list, sudo_adj) ;
     }
     return list;
