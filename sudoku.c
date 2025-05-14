@@ -65,6 +65,7 @@ List* get_adj_nodes(Node* n){
       if (pos_vacia_i != -1) break ; 
       
     }
+    if (pos_vacia_i == -1) return list ;
     for(int i = 1 ; i <= 9; i++){
       Node * sudo_adj ;
       sudo_adj = copy(n) ; 
