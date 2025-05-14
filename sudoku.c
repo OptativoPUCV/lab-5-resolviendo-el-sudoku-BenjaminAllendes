@@ -44,8 +44,31 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-
-    return 1;
+  int arreglo[10] = {0} ;
+  for(int i = 0 ; i < 9 ; i++){
+    for(int k = 9 ; k< 9 ; k++){
+      if (arreglo[n->sudo[i][k]] == 0){
+        arreglo[n->sudo[i][k]] = 1 ;
+        printf("numero = %d, ", arreglo[n->sudo[i][k]]) ;
+      }
+      else {
+        return 0 ;
+      }
+    }
+  }
+  int arreglo_dos[10] = {0} ;
+  for(int i = 0 ; i < 9 ; i++){
+    for(int k = 0 ; k < 9 ; k++){
+      if (arreglo_dos[n->sudo[k][i]] == 0){
+        printf("numero = %d, ", arreglo_dos[n->sudo[k][i]]) ;
+        arreglo_dos[n->sudo[k][i]] = 1 ;
+      }
+      else {
+        return 0 ;
+      }
+    }
+  }  
+  return 1;
 }
 
 
@@ -78,32 +101,9 @@ List* get_adj_nodes(Node* n){
 
 int is_final(Node* n){
   
-  int arreglo[10] = {0} ;
-  for(int i = 0 ; i < 9 ; i++){
-    for(int k = 9 ; k< 9 ; k++){
-      if (arreglo[n->sudo[i][k]] == 0){
-        arreglo[n->sudo[i][k]] = 1 ;
-        printf("numero = %d, ", arreglo[n->sudo[i][k]]) ;
-      }
-      else {
-        return 0 ;
-      }
-    }
-  }
-  int arreglo_dos[10] = {0} ;
-  for(int i = 0 ; i < 9 ; i++){
-    for(int k = 0 ; k < 9 ; k++){
-      if (arreglo_dos[n->sudo[k][i]] == 0){
-        printf("numero = %d, ", arreglo_dos[n->sudo[k][i]]) ;
-        arreglo_dos[n->sudo[k][i]] = 1 ;
-      }
-      else {
-        return 0 ;
-      }
-    }
-  }
   
-  return 1;
+  
+  return 0 ;
 }
 
 Node* DFS(Node* initial, int* cont){
