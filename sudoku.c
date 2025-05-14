@@ -77,7 +77,7 @@ List* get_adj_nodes(Node* n){
 
 
 int is_final(Node* n){
-  /*
+  
   int arreglo[10] = {0} ;
   for(int i = 0 ; i < 9 ; i++){
     for(int k = 9 ; k< 9 ; k++){
@@ -88,10 +88,20 @@ int is_final(Node* n){
         return 0 ;
       }
     }
-    arreglo = {0} ;
   }
-  */
-  return 0;
+  int arreglo_dos[10] = {0} ;
+  for(int i = 0 ; i < 9 ; i++){
+    for(int k = 0 ; k < 9 ; k++){
+      if (arreglo_dos[n->sudo[k][i]] == 0){
+        arreglo_dos[n->sudo[k][i]] = 1 ;
+      }
+      else {
+        return ;
+      }
+    }
+  }
+  
+  return 1;
 }
 
 Node* DFS(Node* initial, int* cont){
