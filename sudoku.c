@@ -68,6 +68,7 @@ List* get_adj_nodes(Node* n){
     
     for(int i = 1 ; i <= 9; i++){
       Node * sudo_adj = createNode() ;
+      sudo_adj = copy(n) ; 
       sudo_adj->sudo[pos_vacia_i][pos_vacia_k] = i ;
       pushBack(list, sudo_adj) ;
     }
