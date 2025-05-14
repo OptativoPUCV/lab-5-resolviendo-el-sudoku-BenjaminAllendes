@@ -68,6 +68,7 @@ List* get_adj_nodes(Node* n){
     int matriz[9][9] ;
     for(int i = 1 ; i <= 9; i++){
       matriz[pos_vacia_i][pos_vacia_k] = i ;
+      pushBack(list, matriz) ;
     }
     return list;
 }
