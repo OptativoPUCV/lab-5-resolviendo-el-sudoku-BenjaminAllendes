@@ -96,7 +96,7 @@ int is_final(Node* n){
         arreglo_dos[n->sudo[k][i]] = 1 ;
       }
       else {
-        return ;
+        return 0 ;
       }
     }
   }
