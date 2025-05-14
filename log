@@ -62,3 +62,17 @@ sudoku.c:90:15: error: expected expression before '{' token
      arreglo = {0} ;
                ^
 e73f046
+Wed, May 14, 2025 11:00:28 AM: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'is_final':
+sudoku.c:84:32: error: statement with no effect [-Werror=unused-value]
+         arreglo[n->sudo[i][k]] == 1 ;
+         ~~~~~~~~~~~~~~~~~~~~~~~^~~~
+sudoku.c:90:15: error: expected expression before '{' token
+     arreglo = {0} ;
+               ^
+cc1.exe: all warnings being treated as errors
+9cd4821

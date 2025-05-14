@@ -81,7 +81,7 @@ int is_final(Node* n){
   for(int i = 0 ; i < 9 ; i++){
     for(int k = 9 ; k< 9 ; k++){
       if (arreglo[n->sudo[i][k]] == 0){
-        arreglo[->sudo[i][k]] == 1 ;
+        arreglo[n->sudo[i][k]] == 1 ;
       }
       else {
         return 0 ;
