@@ -83,7 +83,6 @@ int is_final(Node* n){
     for(int k = 9 ; k< 9 ; k++){
       if (arreglo[n->sudo[i][k]] == 0){
         arreglo[n->sudo[i][k]] = 1 ;
-        printf("numero = %d, ", arreglo[n->sudo[i][k]]) ;
       }
       else {
         return 0 ;
@@ -94,7 +93,6 @@ int is_final(Node* n){
   for(int i = 0 ; i < 9 ; i++){
     for(int k = 0 ; k < 9 ; k++){
       if (arreglo_dos[n->sudo[k][i]] == 0){
-        printf("numero = %d, ", arreglo_dos[n->sudo[k][i]]) ;
         arreglo_dos[n->sudo[k][i]] = 1 ;
       }
       else {
