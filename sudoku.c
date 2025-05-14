@@ -65,10 +65,11 @@ List* get_adj_nodes(Node* n){
       if (pos_vacia_i != -1) break ; 
       
     }
-    int matriz[9][9] ;
+    
     for(int i = 1 ; i <= 9; i++){
-      matriz[pos_vacia_i][pos_vacia_k] = i ;
-      pushBack(list, matriz) ;
+      Node * sudo_adj = createNode() ;
+      sudo_adj->sudo[pos_vacia_i][pos_vacia_k] = i ;
+      pushBack(list, sudo_adj) ;
     }
     return list;
 }
