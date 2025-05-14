@@ -51,6 +51,24 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
     List* list=createList();
+
+    int pos_vacia_i = -1 ;
+    int pos_vacia_k = -1 ;
+    for(int i = 0 ; i < 9 ; i++){
+      for(int k = 0 ; k < 9 ; k++){
+        if (n->sudo[i][k] == 0) {
+          pos_vacia_i = i ;
+          pos_vacia_k = k ;
+          break ;
+        }
+      }
+      if (pos_vacia_i != -1) break ; 
+      
+    }
+    int matriz[9][9] ;
+    for(int i = 1 ; i <= 9; i++){
+      matriz[pos_vacia_i][pos_vacia_k] = i ;
+    }
     return list;
 }
 

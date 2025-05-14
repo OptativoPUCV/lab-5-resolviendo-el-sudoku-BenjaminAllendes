@@ -1,0 +1,11 @@
+Wed, May 14, 2025 10:45:10 AM: 
+ sudoku.c | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:68:9: error: variable 'matriz' set but not used [-Werror=unused-but-set-variable]
+     int matriz[9][9] ;
+         ^~~~~~
+cc1.exe: all warnings being treated as errors
+3f0e54c
