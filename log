@@ -230,3 +230,20 @@ Wed, May 14, 2025 10:53:15 PM:
  tests:  7|1
 total_score: 55/70
 28ca49b
+Wed, May 14, 2025 11:02:47 PM: 
+ sudoku.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:137:31: error: passing argument 1 of 'get_adj_nodes' from incompatible pointer type [-Werror=incompatible-pointer-types]
+     lista_adj = get_adj_nodes(nodo) ;
+                               ^~~~
+sudoku.c:92:7: note: expected 'Node * {aka struct <anonymous> *}' but argument is of type 'Stack * {aka struct List *}'
+ List* get_adj_nodes(Node* n){
+       ^~~~~~~~~~~~~
+sudoku.c:143:5: error: value computed is not used [-Werror=unused-value]
+     *cont ++ ;
+     ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+b51e87f
