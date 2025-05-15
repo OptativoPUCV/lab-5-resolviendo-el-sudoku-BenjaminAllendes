@@ -75,12 +75,12 @@ int is_valid(Node* n){
           unsigned int contador[10] = {0} ;
           for (int f = 0; f < 3; f++) {
             for (int c = 0; c < 3; c++) {
-                  unsigned int valor = n->sudo[region_fila + f][region_columna + c] ; 
-                  printf("%d ", valor) ;
-                  if (n->sudo[valor] == 0) continue ;
-                  contador[valor] += 1;
-                  if (contador[valor] == 2) return 0 ;
-              }
+                unsigned int valor = n->sudo[region_fila + f][region_columna + c] ; 
+                printf("%d ", valor) ;
+                if (valor == 0) continue ;
+                contador[valor] += 1;
+                if (contador[valor] == 2) return 0 ;
+            }
             printf("\n") ;
           }
       }
