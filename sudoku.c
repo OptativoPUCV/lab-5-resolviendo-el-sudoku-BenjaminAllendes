@@ -69,20 +69,21 @@ int is_valid(Node* n){
         return 0 ;
       }
     }
-  }/*
+  }
   for (int region_fila = 0; region_fila < 9; region_fila += 3) {
       for (int region_columna = 0; region_columna < 9; region_columna += 3) {
-          unsigned int contador[10] = {0};
+          unsigned int contador[10] = {0} ;
           for (int f = 0; f < 3; f++) {
             for (int c = 0; c < 3; c++) {
-                  unsigned int valor = n->sudo[region_fila + f][region_columna + c];
+                  unsigned int valor = n->sudo[region_fila + f][region_columna + c] ; 
+                  if (n->sudo[valor] == 0) continue ;
                   contador[valor] += 1;
                   if (contador[valor] == 2) return 0 ;
               }
           }
       }
   }
-  */
+  
   return 1;
 }
 
