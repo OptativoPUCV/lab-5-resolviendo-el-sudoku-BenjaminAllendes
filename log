@@ -247,3 +247,23 @@ sudoku.c:143:5: error: value computed is not used [-Werror=unused-value]
      ^~~~~~~~
 cc1.exe: all warnings being treated as errors
 b51e87f
+Wed, May 14, 2025 11:03:22 PM: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:132:17: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+   Stack *nodo = initial ;
+                 ^~~~~~~
+sudoku.c:137:31: error: passing argument 1 of 'get_adj_nodes' from incompatible pointer type [-Werror=incompatible-pointer-types]
+     lista_adj = get_adj_nodes(nodo) ;
+                               ^~~~
+sudoku.c:92:7: note: expected 'Node * {aka struct <anonymous> *}' but argument is of type 'Stack * {aka struct List *}'
+ List* get_adj_nodes(Node* n){
+       ^~~~~~~~~~~~~
+sudoku.c:143:5: error: value computed is not used [-Werror=unused-value]
+     *cont ++ ;
+     ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+33a0c64
