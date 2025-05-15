@@ -138,9 +138,11 @@ Node* DFS(Node* initial, int* cont){
     Node * node_list= first(lista_adj) ;
     while(node_list != NULL){
       push(pila, node_list) ;
+      if (is_valid(node_list) && is_final(node_list)) return node_list ;
       node_list = next(lista_adj) ;
     }
     cont ++ ;
+    
   }
   return NULL;
 }
