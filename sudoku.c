@@ -128,13 +128,12 @@ int is_final(Node* n){
 
 Node* DFS(Node* initial, int* cont){
   Stack *pila = createStack() ;
-  pushBack(pila, initial) ;
+  push(pila, initial) ;
   Node *nodo = initial ;
   while (top(pila) != NULL){
     nodo = top(pila) ;
     pop(pila) ;
-    List * lista_adj = createList() ;
-    lista_adj = get_adj_nodes(nodo) ;
+    List *lista_adj = get_adj_nodes(nodo) ;
     Node * node_list= first(lista_adj) ;
     while(node_list != NULL){
       push(pila, node_list) ;
