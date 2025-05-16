@@ -300,3 +300,14 @@ Fri, May 16, 2025 10:08:20 AM:
  tests:  10|0
 total_score: 70/70
 e602f50
+Fri, May 16, 2025 10:09:35 AM: 
+ sudoku.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:136:50: error: 'node_list' undeclared (first use in this function)
+     if (is_valid(nodo) && is_final(nodo)) return node_list ;
+                                                  ^~~~~~~~~
+sudoku.c:136:50: note: each undeclared identifier is reported only once for each function it appears in
+664ae3d
