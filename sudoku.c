@@ -133,7 +133,7 @@ Node* DFS(Node* initial, int* cont){
   while (top(pila) != NULL){
     nodo = top(pila) ;
     pop(pila) ;
-    if (is_valid(nodo) && is_final(nodo)) return node_list ;
+    if (is_valid(nodo) && is_final(nodo)) return nodo ;
     List *lista_adj = get_adj_nodes(nodo) ;
     Node * node_list= first(lista_adj) ;
     while(node_list != NULL){
